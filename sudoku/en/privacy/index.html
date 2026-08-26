@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --fg: #111;
+    --muted: #555;
+    --bg: #fff;
+    --link: #0b57d0;
+    --hr: #e5e7eb;
+  }
+  /* ダークの配色。システム設定（prefers-color-scheme）と、アプリが
+     html[data-theme] に指定した値の両方で同じ値を使う。アプリ内のテーマ切り替えは
+     システム設定と独立しているため、data-theme の指定を優先する（Issue #753）。 */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fg: #f5f8fb;
+      --muted: #b7c4d1;
+      --bg: #111820;
+      --link: #8ab4f8;
+      --hr: #334758;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fg: #f5f8fb;
+    --muted: #b7c4d1;
+    --bg: #111820;
+    --link: #8ab4f8;
+    --hr: #334758;
+  }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 840px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.35;
+    margin: 1.6em 0 0.6em;
+  }
+  h1 { font-size: 1.875rem; }
+  h2 { font-size: 1.375rem; }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0.75em 0; }
+  ul { margin: 0.5em 0 0.75em 1.2em; }
+  li { margin: 0.25em 0; }
+  hr { border: none; border-top: 1px solid var(--hr); margin: 1.5rem 0; }
+  a { color: var(--link); text-decoration: underline; }
+  .footer { margin-top: 2rem; font-size: 0.9rem; color: var(--muted); }
+</style>
+</head>
+<body>
+  <main class="container">
+    <h1>Privacy Policy (Number Place Solver Master)</h1>
+
+    <p>Last updated: 16 Aug 2026</p>
+    <p>Company/Provider: More Day Devs</p>
+    <p>Contact: more.day.devs@gmail.com</p>
+
+    <p>This Privacy Policy (the "Policy") explains how More Day Devs ("we", "us"), the provider and data controller of the application "Number Place Solver Master" (the "App"), handles information about users. The App uses Google's analytics services (e.g., Firebase Analytics) to measure usage for product improvement. Usage data collected through Firebase / Google Analytics may also be stored and aggregated in cloud environments managed by us for quality improvement and usage analysis. We do not use the data for advertising or cross-app tracking.</p>
+
+    <p>For the terms on which the App is provided, please refer to our separate "Terms of Service". This Policy and the Terms of Service apply together.</p>
+
+    <hr>
+
+    <h2>1. Data We Collect and How</h2>
+
+    <p><strong>We do not collect names, email addresses, or other direct identifiers unless you contact us.</strong></p>
+
+    <ul>
+      <li>
+        Usage data (product interactions): screen views, button taps, session counts and duration, first open, and similar in-app events.<br>
+        How collected: via Firebase SDK (automatic and developer-defined events).
+      </li>
+      <li>Identifiers: Firebase Installation ID / App Instance ID (an installation-scoped pseudonymous ID). We do not carry out cross-app or cross-site tracking of individuals for advertising purposes.</li>
+      <li>
+        Crash and diagnostic data: crash details, stack traces, and application state associated with errors.<br>
+        How collected: via Firebase Crashlytics.
+      </li>
+      <li>Network data processed by providers: IP address and basic device/OS information may be received by Google as part of standard internet communications (e.g., to provide approximate region metrics).</li>
+    </ul>
+
+    <p>Note: Actual collection depends on your device/platform controls and the features provided by Firebase.</p>
+
+    <hr>
+
+    <h2>2. Purposes of Use</h2>
+
+    <ul>
+      <li>Analytics for quality improvement, feature planning, and stability</li>
+      <li>Crash and diagnostic analysis through Firebase Crashlytics to investigate failures and improve stability</li>
+    </ul>
+
+    <p><strong>We do not conduct cross-context behavioral advertising or tracking across other apps/websites.</strong></p>
+
+    <hr>
+
+    <h2>3. Data We Do Not Collect</h2>
+
+    <p>We do not intentionally collect: precise location (GPS), contacts, photos, calendars, messages, financial/health/biometric data, or other sensitive categories. If future features require new data types, we will notify you and update this Policy in advance.</p>
+
+    <hr>
+
+    <h2>4. Camera Use</h2>
+
+    <p>The App may use the camera to capture puzzle images for on-device processing. <strong>Captured images are processed locally and are not sent to our servers or third parties.</strong> If a cloud feature is added later, we will obtain consent and update this Policy beforehand.</p>
+
+    <hr>
+
+    <h2>5. Sharing and Disclosure</h2>
+
+    <ul>
+      <li>Service provider: Google (Firebase Analytics and Firebase Crashlytics) processes usage, identifier, crash, and diagnostic data on our behalf for analytics and stability improvement. We do not sell your data.</li>
+      <li>Legal: We may disclose information if required by law or to protect rights, safety, and compliance.</li>
+    </ul>
+
+    <p><strong>We do not share personal information for cross-context behavioral advertising ("share" under CPRA).</strong></p>
+
+    <hr>
+
+    <h2>6. International Transfers</h2>
+
+    <p>Firebase/Google may process data on infrastructure located outside your country (e.g., the US/EU). We rely on Google's safeguards and contracts applicable to its services.</p>
+
+    <hr>
+
+    <h2>7. Retention</h2>
+
+    <p>Event data retention in Google Analytics is currently set to 14 months. Data that we store in environments managed by us for analysis is not automatically deleted by that Google Analytics retention setting. We retain such data only as needed for App quality improvement and usage analysis, and delete it under our control when it is no longer needed. Aggregated statistics detached from individual identifiers may be retained as needed for analysis.</p>
+
+    <hr>
+
+    <h2>8. Your Choices</h2>
+
+    <ul>
+      <li>Opt-out: You can stop the use of analytics and advertising identifiers from your device settings. On Android, go to "Settings" &gt; "Privacy" &gt; "Ads" and delete your advertising ID. On iOS, go to "Settings" &gt; "Privacy &amp; Security" &gt; "Tracking" and turn off app tracking requests. Google also offers its own opt-out mechanisms for analytics data it processes.</li>
+      <li>Resetting identifiers: You can reset your advertising ID from the same device settings. Data collected after a reset is not linked to the identifier used before it.</li>
+      <li>Deletion requests: Contact us at the address below. Where the relevant data can be identified, we will use the appropriate Google process and delete corresponding data from environments managed by us (we may be unable to comply where the data cannot be identified technically, or where it has already been aggregated and detached from individual identifiers).</li>
+    </ul>
+
+    <hr>
+
+    <h2>9. Legal Bases and Region-Specific Rights</h2>
+
+    <p>When required by law (e.g., in the EEA/UK), our processing for analytics relies on your consent; otherwise we may rely on legitimate interests to improve the App while respecting your controls.</p>
+
+    <p>Residents of certain regions (such as the EEA/UK and California, USA) have additional rights:</p>
+
+    <ul>
+      <li>EEA/UK (GDPR/UK GDPR): right of access, rectification, erasure, restriction, portability, and objection; the right to withdraw consent at any time; and the right to lodge a complaint with a supervisory authority.</li>
+      <li>California (CCPA/CPRA): rights to know, delete, correct, and to opt-out of "sale" or "sharing" of personal information. We do not sell or share personal information as defined by CPRA.</li>
+    </ul>
+
+    <p>You can exercise rights by contacting us. We may need to verify your identity and the relevant App Instance ID.</p>
+
+    <p>Note: If we actively offer the App to residents of the EEA/UK, we may designate an EU/UK representative as required by local law and will update this Policy with their contact details.</p>
+
+    <hr>
+
+    <h2>10. Security</h2>
+
+    <p>We apply industry-standard safeguards (e.g., TLS in transit, access controls). Our providers maintain their own security programs appropriate for their services.</p>
+
+    <hr>
+
+    <h2>11. Children's Privacy</h2>
+
+    <p>The App is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information, please contact us to request deletion.</p>
+
+    <hr>
+
+    <h2>12. Changes to This Policy</h2>
+
+    <p>We will post updates in our store listing (and, if applicable, in-App) and indicate the "Last updated" date above. If changes materially affect your rights, we will provide additional notice and obtain consent where required.</p>
+
+    <hr>
+
+    <h2>13. Contact</h2>
+
+    <p>Company/Provider: More Day Devs</p>
+    <p>Email: more.day.devs@gmail.com</p>
+    <p>For questions or requests regarding this Policy, please contact us at the address above. We may ask for information needed to identify your request, such as your device model and the period of use.</p>
+
+    <div class="footer">
+      <p>© <span id="year"></span> More Day Devs. All rights reserved.</p>
+    </div>
+  </main>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
