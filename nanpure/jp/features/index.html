@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="写真で読み取ってナンプレを解くアプリ「ナンプレ解答名人」の機能紹介。9×9・大型・合体の読み取り、認識精度の表示、数字の修正、一括解答と1手ずつの確認を実際の画面で紹介します。">
+  <title>ナンプレ解答名人の機能紹介</title>
+  <link rel="canonical" href="https://www.moredaydevs.com/nanpure/jp/features/">
+  <link rel="alternate" hreflang="ja" href="https://www.moredaydevs.com/nanpure/jp/features/">
+  <link rel="alternate" hreflang="en" href="https://www.moredaydevs.com/nanpure/en/features/">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ナンプレ解答名人">
+  <meta property="og:title" content="ナンプレ解答名人の機能紹介">
+  <meta property="og:description" content="写真で読み取ってナンプレを解くアプリ「ナンプレ解答名人」の機能紹介。">
+  <meta property="og:url" content="https://www.moredaydevs.com/nanpure/jp/features/">
+  <meta property="og:image" content="https://www.moredaydevs.com/assets/store_screenshot_1.png">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{--brand:#0b8f4d;--brand-dark:#08743f;--brand-soft:#eaf7f0;--ink:#15202b;--muted:#5d6873;--page:#f4f6f5;--card:#fff;--line:#dfe5e2;--ok:#2e9e6b;--warn:#e0a030;--risk:#d9534f}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;font-size:16px}
+    a{color:var(--brand-dark)}
+    .shell{width:min(920px,calc(100% - 32px));margin:0 auto;padding-block:28px 48px}
+    header{display:flex;align-items:center;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+    header img{width:44px;height:44px}
+    header a{text-decoration:none;color:var(--ink);font-weight:800}
+    header a.lang{margin-left:auto;font-weight:600;font-size:14px;color:var(--brand-dark)}
+    .intro{margin-top:24px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    h1{margin:0;font-size:clamp(28px,5.4vw,40px);line-height:1.35;letter-spacing:-.03em;text-wrap:balance}
+    .lead{font-size:18px;margin:16px 0 0;max-width:40em}
+    .toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+    .toc a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;color:var(--ink);background:var(--page)}
+    .toc a:hover{border-color:var(--brand)}
+    .feature{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(20px,4vw,44px);align-items:start;margin-top:22px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    .feature.flip{grid-template-columns:260px minmax(0,1fr)}
+    .feature.flip .shot{order:-1}
+    .feature h2{margin:0 0 12px;font-size:clamp(20px,3.6vw,28px);line-height:1.4;text-wrap:balance}
+    .feature h3{margin:22px 0 4px;font-size:17px}
+    .feature p{margin:0 0 12px}
+    .shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    .shot figcaption{margin-top:6px;color:var(--muted);font-size:13px;text-align:center}
+    .shot figure{margin:0}
+    .shot figure+figure{margin-top:16px}
+    .label{display:inline-block;margin-bottom:8px;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--brand-dark)}
+    ul.plain{margin:0 0 12px;padding-left:1.3em} ul.plain li+li{margin-top:4px}
+    .tablewrap{overflow-x:auto;margin:10px 0 14px}
+    table{width:100%;border-collapse:collapse;font-size:15px}
+    th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{background:var(--brand-soft);font-weight:700}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px;padding:0;list-style:none}
+    .legend li{display:flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+    .legend i{width:12px;height:12px;border-radius:3px;border:2px solid}
+    .note{padding:14px 16px;background:var(--brand-soft);border-radius:14px;font-size:15px}
+    .faq h2{margin:0 0 12px;font-size:clamp(22px,3.6vw,28px)}
+    .faq{margin-top:22px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    .faq dt{font-weight:700;margin-top:16px} .faq dd{margin:4px 0 0}
+    .cta{margin-top:22px;padding:28px 24px;background:var(--brand-soft);border-radius:22px;text-align:center}
+    .cta p{margin:0 0 14px} .cta img{width:200px;height:auto}
+    .ph{display:inline-block;max-width:100%}
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:680px){
+      .feature,.feature.flip{grid-template-columns:1fr}
+      .feature.flip .shot{order:0}
+      .shot{max-width:280px;margin:0 auto;width:100%}
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <img src="../../../assets/company_logo.png" alt="" aria-hidden="true">
+    <a href="../../../">More Day Devs / ナンプレ解答名人</a>
+    <a class="lang" href="../../en/features/" hreflang="en" lang="en">English</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1><span class="ph">ナンプレ解答名人の</span><span class="ph">機能紹介</span></h1>
+      <p class="lead">ナンプレ解答名人は、新聞や雑誌のナンプレを写真で読み取り、答えや次の1手を確認できるアプリです。このページでは、できることを1つずつ、実際の画面と一緒に紹介します。</p>
+      <ul class="toc" aria-label="このページの内容">
+        <li><a href="#boards">対応する盤面</a></li>
+        <li><a href="#capture">読み取り方</a></li>
+        <li><a href="#confidence">認識精度</a></li>
+        <li><a href="#fix">数字の直し方</a></li>
+        <li><a href="#solve">答えと1手ずつ</a></li>
+        <li><a href="#theme">画面の見え方</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ul>
+    </section>
+
+    <section class="feature" id="boards">
+      <div>
+        <span class="label">対応する盤面</span>
+        <h2><span class="ph">9×9も、大型も、合体も</span><span class="ph">同じ手順で解けます</span></h2>
+        <p>標準の9×9に加えて、16×16・25×25・30×30の大型ナンプレと、サムライのように盤面が重なる合体ナンプレを読み取れます。合体は14連まで動作を確認しています。25×25や30×30のように2桁の数字が並ぶ盤面も、そのまま読み取ります。</p>
+        <p>盤面が大きいほど、手で入力する量は一気に増えます。</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>盤面</th><th>マスの数</th></tr></thead>
+            <tbody>
+              <tr><td>9×9</td><td class="num">81</td></tr>
+              <tr><td>16×16</td><td class="num">256</td></tr>
+              <tr><td>サムライ（5連の合体）</td><td class="num">369</td></tr>
+              <tr><td>25×25</td><td class="num">625</td></tr>
+              <tr><td>30×30</td><td class="num">900</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>どの盤面でも、撮って読み取るところからの手順は9×9と変わりません。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_1.png" width="1080" height="1920" alt="9×9、大型、合体の3種類の盤面">
+          <figcaption>9×9・大型・合体に対応</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="capture">
+      <div>
+        <span class="label">読み取り方</span>
+        <h2><span class="ph">紙の問題も、</span><span class="ph">画面の問題も読み取れます</span></h2>
+        <h3>新聞・雑誌・問題集</h3>
+        <p>アプリのカメラで盤面を撮ります。盤面全体が枠に入るように、できるだけ正面から撮ってください。</p>
+        <h3>アプリやWebの問題</h3>
+        <p>スクリーンショットや保存済みの画像を選ぶだけです。紙より線がはっきりしているので、読み取りも安定します。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_3.png" width="1080" height="1920" alt="紙のナンプレを撮影すると、アプリに盤面として取り込まれる様子">
+          <figcaption>カメラ・画像ファイル・デジタル盤面に対応</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="confidence">
+      <div>
+        <span class="label">認識精度</span>
+        <h2><span class="ph">読み取った数字の確かさを</span><span class="ph">3段階で表示します</span></h2>
+        <p>数字の読み取りには、ナンプレの盤面に合わせて学習させた独自のAIを使っています。それでも、影や印刷のかすれで読み違えることはあります。</p>
+        <p>そこで、読み取った数字ごとに、どれくらい自信があるかを色で表示します。</p>
+        <ul class="legend">
+          <li><i style="border-color:var(--ok)"></i>ほぼ確実</li>
+          <li><i style="border-color:var(--warn)"></i>念のため確認</li>
+          <li><i style="border-color:var(--risk)"></i>要チェック</li>
+        </ul>
+        <p>全部のマスを見直さなくても、色の付いたマスだけ見れば済みます。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_4.png" width="1080" height="1920" alt="読み取った数字が確かさに応じて3色で囲まれた盤面">
+          <figcaption>確かさに応じて色分け</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="fix">
+      <div>
+        <span class="label">数字の直し方</span>
+        <h2><span class="ph">違っている数字は、</span><span class="ph">その場で直せます</span></h2>
+        <ul class="plain">
+          <li><strong>タップして直す</strong>: 違っている数字をタップして、正しい数字を選びます。</li>
+          <li><strong>要確認をまとめて見る</strong>: 「要確認」ボタンから、確認したほうがよい数字を順番に見ていけます。</li>
+          <li><strong>元の写真と見比べる</strong>: 「元画像」と「読み取り」を切り替えて、写真と読み取り結果を見比べられます。</li>
+        </ul>
+        <p>読み取りに任せきりにせず、納得してから解答に進めます。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_5.png" width="1080" height="1920" alt="要確認の数字がハイライトされた編集画面">
+          <figcaption>要確認の数字をまとめて確認</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="solve">
+      <div>
+        <span class="label">答えと1手ずつ</span>
+        <h2><span class="ph">答えを全部見ることも、</span><span class="ph">1手ずつ進めることもできます</span></h2>
+        <h3>一括で解答</h3>
+        <p>最後まで一度に埋めます。雑誌の答え合わせや、自分の解答が合っているかの確認に向いています。</p>
+        <h3>1手ずつ確認</h3>
+        <p>次に埋まる1マスだけを表示します。前後に行き来しながら、どのマスがどの順で決まっていくかをたどれます。途中で詰まったところだけ見て、続きは自分で解く使い方もできます。</p>
+        <h3>使われた解き方</h3>
+        <p>その問題を解くのに使ったテクニック（隠れシングル、ポインティングペア、Xウィングなど）を難しさのレベルと一緒に表示します。推定の手数も分かるので、問題の難しさの目安になります。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_2.png" width="1080" height="1920" alt="一括で解答した盤面と、次の1マスだけを表示した盤面">
+          <figcaption>一括解答と1手ずつ確認</figcaption>
+        </figure>
+        <figure>
+          <img src="../../../assets/sudoku_technique_analysis_details_light.png" width="360" height="800" alt="使用テクニックの一覧と推定手数の画面">
+          <figcaption>使用テクニックと推定手数</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="theme">
+      <div>
+        <span class="label">画面の見え方</span>
+        <h2>ライトとダークを選べます</h2>
+        <p>明るい画面と暗い画面を切り替えられます。夜に紙の問題と見比べるときは、ダークにするとまぶしさを抑えられます。</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_6.png" width="1080" height="1920" alt="ライトとダークのホーム画面">
+          <figcaption>ライト・ダーク</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>よくある質問</h2>
+      <dl>
+        <dt>うまく読み取れません。</dt>
+        <dd>明るい場所で、盤面全体がゆがまず写るように撮ってください。見開きのページは、紙を平らにしてから撮ると認識しやすくなります。読み取り後は、色の付いたマスを中心に確認して直してください。</dd>
+        <dt>最後まで解けないことはありますか。</dt>
+        <dd>読み取りに誤りがあって盤面が矛盾している場合や、問題によっては、途中で進めなくなることがあります。その場合は、読み取り結果に誤りがないかを先に確認してください。</dd>
+      </dl>
+    </section>
+
+    <div class="cta">
+      <p><strong>ナンプレ解答名人</strong><br>新聞・雑誌の問題はカメラで、アプリやWebの問題はスクリーンショットで読み取り、自動で解答します。</p>
+      <a href="https://play.google.com/store/apps/details?id=com.moredaydevs.nanpure&amp;utm_source=official_site&amp;utm_campaign=features" target="_blank" rel="noopener noreferrer">
+        <img src="../../../assets/google_play_badge_ja.png" width="646" height="250" alt="Google Play で手に入れよう">
+      </a>
+    </div>
+  </main>
+  <footer>© 2026 More Day Devs.</footer>
+</div>
+</body>
+</html>

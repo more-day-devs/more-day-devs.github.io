@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Features of Number Place Solver Master, an app that reads Number Place puzzles from a photo and solves them. Covers 9×9, large and Samurai-style grids, recognition confidence, fixing digits, and seeing the answer or one step at a time.">
+  <title>Number Place Solver Master Features</title>
+  <link rel="canonical" href="https://www.moredaydevs.com/nanpure/en/features/">
+  <link rel="alternate" hreflang="ja" href="https://www.moredaydevs.com/nanpure/jp/features/">
+  <link rel="alternate" hreflang="en" href="https://www.moredaydevs.com/nanpure/en/features/">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/favicon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Number Place Solver Master">
+  <meta property="og:title" content="Number Place Solver Master Features">
+  <meta property="og:description" content="Features of Number Place Solver Master, an app that reads Number Place puzzles from a photo and solves them.">
+  <meta property="og:url" content="https://www.moredaydevs.com/nanpure/en/features/">
+  <meta property="og:image" content="https://www.moredaydevs.com/assets/store_screenshot_en_1.png">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{--brand:#0b8f4d;--brand-dark:#08743f;--brand-soft:#eaf7f0;--ink:#15202b;--muted:#5d6873;--page:#f4f6f5;--card:#fff;--line:#dfe5e2;--ok:#2e9e6b;--warn:#e0a030;--risk:#d9534f}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;font-size:16px}
+    a{color:var(--brand-dark)}
+    .shell{width:min(920px,calc(100% - 32px));margin:0 auto;padding-block:28px 48px}
+    header{display:flex;align-items:center;gap:12px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+    header img{width:44px;height:44px}
+    header a{text-decoration:none;color:var(--ink);font-weight:800}
+    header a.lang{margin-left:auto;font-weight:600;font-size:14px;color:var(--brand-dark)}
+    .intro{margin-top:24px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    h1{margin:0;font-size:clamp(28px,5.4vw,40px);line-height:1.35;letter-spacing:-.03em;text-wrap:balance}
+    .lead{font-size:18px;margin:16px 0 0;max-width:40em}
+    .toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+    .toc a{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;color:var(--ink);background:var(--page)}
+    .toc a:hover{border-color:var(--brand)}
+    .feature{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(20px,4vw,44px);align-items:start;margin-top:22px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    .feature.flip{grid-template-columns:260px minmax(0,1fr)}
+    .feature.flip .shot{order:-1}
+    .feature h2{margin:0 0 12px;font-size:clamp(20px,3.6vw,28px);line-height:1.4;text-wrap:balance}
+    .feature h3{margin:22px 0 4px;font-size:17px}
+    .feature p{margin:0 0 12px}
+    .shot img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+    .shot figcaption{margin-top:6px;color:var(--muted);font-size:13px;text-align:center}
+    .shot figure{margin:0}
+    .shot figure+figure{margin-top:16px}
+    .label{display:inline-block;margin-bottom:8px;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--brand-dark)}
+    ul.plain{margin:0 0 12px;padding-left:1.3em} ul.plain li+li{margin-top:4px}
+    .tablewrap{overflow-x:auto;margin:10px 0 14px}
+    table{width:100%;border-collapse:collapse;font-size:15px}
+    th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+    th{background:var(--brand-soft);font-weight:700}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px;padding:0;list-style:none}
+    .legend li{display:flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+    .legend i{width:12px;height:12px;border-radius:3px;border:2px solid}
+    .note{padding:14px 16px;background:var(--brand-soft);border-radius:14px;font-size:15px}
+    .faq h2{margin:0 0 12px;font-size:clamp(22px,3.6vw,28px)}
+    .faq{margin-top:22px;padding:clamp(24px,5vw,46px);background:var(--card);border:1px solid var(--line);border-radius:22px}
+    .faq dt{font-weight:700;margin-top:16px} .faq dd{margin:4px 0 0}
+    .cta{margin-top:22px;padding:28px 24px;background:var(--brand-soft);border-radius:22px;text-align:center}
+    .cta p{margin:0 0 14px} .cta img{width:200px;height:auto}
+    .ph{display:inline-block;max-width:100%}
+    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:680px){
+      .feature,.feature.flip{grid-template-columns:1fr}
+      .feature.flip .shot{order:0}
+      .shot{max-width:280px;margin:0 auto;width:100%}
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header>
+    <img src="../../../assets/company_logo.png" alt="" aria-hidden="true">
+    <a href="../../../en/">More Day Devs / Number Place Solver Master</a>
+    <a class="lang" href="../../jp/features/" hreflang="ja" lang="ja">日本語</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Number Place Solver Master Features</h1>
+      <p class="lead">Number Place Solver Master reads Number Place puzzles from newspapers and magazines with your camera, then shows you the answer or the next step. This page walks through what it can do, one feature at a time, with screens from the app.</p>
+      <ul class="toc" aria-label="On this page">
+        <li><a href="#boards">Supported grids</a></li>
+        <li><a href="#capture">Reading puzzles</a></li>
+        <li><a href="#confidence">Recognition confidence</a></li>
+        <li><a href="#fix">Fixing digits</a></li>
+        <li><a href="#solve">Answer or step by step</a></li>
+        <li><a href="#theme">Light and dark</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </section>
+
+    <section class="feature" id="boards">
+      <div>
+        <span class="label">Supported grids</span>
+        <h2>9×9, large and combination grids, all solved the same way</h2>
+        <p>Besides the standard 9×9, the app reads large grids of 16×16, 25×25 and 30×30, and combination puzzles where grids overlap, such as Samurai. Combination puzzles are tested with up to 14 overlapping grids. Grids with two-digit numbers, like 25×25 and 30×30, are read as they are.</p>
+        <p>The bigger the grid, the more there is to type in by hand.</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Grid</th><th>Cells</th></tr></thead>
+            <tbody>
+              <tr><td>9×9</td><td class="num">81</td></tr>
+              <tr><td>16×16</td><td class="num">256</td></tr>
+              <tr><td>Samurai (5 overlapping grids)</td><td class="num">369</td></tr>
+              <tr><td>25×25</td><td class="num">625</td></tr>
+              <tr><td>30×30</td><td class="num">900</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Whatever the grid, the steps from taking the photo onward are the same as for 9×9.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_1.png" width="1080" height="1920" alt="Large, Extreme and Samurai grids">
+          <figcaption>9×9, large and combination grids</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="capture">
+      <div>
+        <span class="label">Reading puzzles</span>
+        <h2>Puzzles on paper and on screen</h2>
+        <h3>Newspapers, magazines and puzzle books</h3>
+        <p>Take a photo of the grid with the app's camera. Fit the whole grid in the frame and shoot it as straight on as you can.</p>
+        <h3>Puzzles in apps or on the web</h3>
+        <p>Just pick a screenshot or a saved image. The lines are sharper than on paper, so recognition is more reliable.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_3.png" width="1080" height="1920" alt="A paper puzzle being photographed and turned into a grid in the app">
+          <figcaption>Camera, saved images or on-screen puzzles</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="confidence">
+      <div>
+        <span class="label">Recognition confidence</span>
+        <h2>Every digit shows how sure the app is</h2>
+        <p>Digits are read by our own AI, trained on Number Place grids. Even so, shadows or faint print can cause a misread.</p>
+        <p>So each digit it reads is colored by how confident the app is about it.</p>
+        <ul class="legend">
+          <li><i style="border-color:var(--ok)"></i>Confident</li>
+          <li><i style="border-color:var(--warn)"></i>Worth a check</li>
+          <li><i style="border-color:var(--risk)"></i>Needs review</li>
+        </ul>
+        <p>Instead of checking every cell, you only need to look at the colored ones.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_4.png" width="1080" height="1920" alt="A grid with each read digit outlined in one of three colors">
+          <figcaption>Colored by confidence</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="fix">
+      <div>
+        <span class="label">Fixing digits</span>
+        <h2>Fix a wrong digit on the spot</h2>
+        <ul class="plain">
+          <li><strong>Tap to fix</strong>: tap the wrong digit and choose the right one.</li>
+          <li><strong>Review flagged digits at once</strong>: the Review button takes you through the digits worth checking, one by one.</li>
+          <li><strong>Compare with the photo</strong>: switch between Original and Scanned to compare the photo with what was read.</li>
+        </ul>
+        <p>You can check the reading first and solve only when you are satisfied with it.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_5.png" width="1080" height="1920" alt="The edit screen with a flagged digit highlighted">
+          <figcaption>Review flagged digits at once</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature" id="solve">
+      <div>
+        <span class="label">Answer or step by step</span>
+        <h2>See the whole answer, or go one step at a time</h2>
+        <h3>Show the answer</h3>
+        <p>Fills in the whole grid at once. Useful for checking a magazine puzzle or your own solution.</p>
+        <h3>Review step-by-step</h3>
+        <p>Shows only the next cell to fill in. Move back and forth to follow which cell is decided in what order. You can look only at the part where you got stuck and solve the rest yourself.</p>
+        <h3>Techniques used</h3>
+        <p>Shows the techniques needed to solve the puzzle, such as Hidden Single, Pointing Pair and X-Wing, with their difficulty level. The estimated number of steps gives you a sense of how hard the puzzle is.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_2.png" width="1080" height="1920" alt="A fully solved grid and a grid showing only the next digit">
+          <figcaption>Show the answer or go step by step</figcaption>
+        </figure>
+        <figure>
+          <img src="../../../assets/sudoku_technique_analysis_details_light_en.png" width="360" height="800" alt="List of techniques used and the estimated number of steps">
+          <figcaption>Techniques used and estimated steps</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="feature flip" id="theme">
+      <div>
+        <span class="label">Light and dark</span>
+        <h2>Choose light or dark</h2>
+        <p>Switch between a light and a dark screen. When you compare with a paper puzzle at night, dark mode keeps the glare down.</p>
+      </div>
+      <div class="shot">
+        <figure>
+          <img src="../../../assets/store_screenshot_en_6.png" width="1080" height="1920" alt="Home screen in light and dark">
+          <figcaption>Light and dark</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>The app doesn't read my puzzle well.</dt>
+        <dd>Take the photo in good light, with the whole grid in view and not distorted. For a two-page spread, flatten the paper before shooting. After reading, check the colored cells first and fix any mistakes.</dd>
+        <dt>Can a puzzle fail to solve?</dt>
+        <dd>If a digit was misread and the grid contradicts itself, or with some puzzles, solving can stop partway. If that happens, first check the reading for mistakes.</dd>
+      </dl>
+    </section>
+
+    <div class="cta">
+      <p><strong>Number Place Solver Master</strong><br>Read newspaper and magazine puzzles with your camera, or puzzles in apps and on the web from a screenshot, and solve them automatically.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.moredaydevs.nanpure&amp;utm_source=official_site&amp;utm_campaign=features_en" target="_blank" rel="noopener noreferrer">
+        <img src="../../../assets/google_play_badge_en.png" width="646" height="250" alt="Get it on Google Play">
+      </a>
+    </div>
+  </main>
+  <footer>© 2026 More Day Devs.</footer>
+</div>
+</body>
+</html>

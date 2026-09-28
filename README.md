@@ -13,6 +13,9 @@ GitHub Pages で静的配信しています。
 | `sudoku/jp/terms/` | 利用規約（日本語） | `apps/sudoku_app/store/terms_of_service_ja.html` |
 | `sudoku/en/privacy/` | プライバシーポリシー（英語） | `apps/sudoku_app/store/privacy_policy_en.html` |
 | `sudoku/en/terms/` | 利用規約（英語） | `apps/sudoku_app/store/terms_of_service_en.html` |
+| `nanpure/jp/features/` | 機能紹介（日本語） | `docs/official_site/nanpure/jp/features/index.html` |
+| `nanpure/en/features/` | 機能紹介（英語） | `docs/official_site/nanpure/en/features/index.html` |
+| `sitemap.xml` / `robots.txt` | 検索エンジン向け | `docs/official_site/` 直下 |
 
 法務ページの URL はアプリ内とストア掲載情報から参照されています。**パスを変えないこと。**
 
