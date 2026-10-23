@@ -394,6 +394,50 @@
       flex: 0 0 auto;
     }
 
+
+    .release-history {
+      margin-top: 22px;
+    }
+
+    .release-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .release-item {
+      padding: 18px 0;
+      border-top: 1px solid #e9eeeb;
+    }
+
+    .release-item:first-child {
+      padding-top: 4px;
+      border-top: 0;
+    }
+
+    .release-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .release-version {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .release-date {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .release-item p {
+      margin: 5px 0 0;
+      color: #35414d;
+      font-size: 14px;
+    }
+
     footer {
       margin-top: 24px;
       padding: 22px 10px 4px;
@@ -690,6 +734,47 @@
           </nav>
         </section>
       </div>
+
+      <section class="card section-card release-history" aria-labelledby="release-history-title">
+        <h2 class="section-title" id="release-history-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 3-6.7"/>
+            <path d="M3 4v5h5M12 7v5l3 2"/>
+          </svg>
+          更新履歴
+        </h2>
+
+        <ol class="release-list">
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.1.0</strong>
+              <time class="release-date" datetime="2026-10-15">2026年10月15日</time>
+            </div>
+            <p>不等号ナンプレに対応しました。写真から読み取って、解答と一手ずつの解説を確認できます。大型・合体・不等号ナンプレの解答を、動画広告の視聴で1日1問まで確認できるようにしました。</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.2</strong>
+              <time class="release-date" datetime="2026-09-23">2026年9月23日</time>
+            </div>
+            <p>英語表示に正式対応し、数字の読み取り精度を改善しました。盤面表示や中断復帰などの不具合も修正し、Google Play の配信地域を日本を含む7か国へ拡大しました。</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.1</strong>
+              <time class="release-date" datetime="2026-09-06">2026年9月6日</time>
+            </div>
+            <p>解答前に、使われるテクニックと手数を確認できるようになりました。1回の広告視聴で確認できる手数を10手から20手へ増やしました。</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.0</strong>
+              <time class="release-date" datetime="2026-09-01">2026年9月1日</time>
+            </div>
+            <p>Google Play で初回公開しました。写真や保存画像からの盤面読み取り、自動解答、9×9・大型・合体盤面、一手ずつの解答確認に対応しています。</p>
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>

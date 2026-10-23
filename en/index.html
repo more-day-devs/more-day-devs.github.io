@@ -394,6 +394,50 @@
       flex: 0 0 auto;
     }
 
+
+    .release-history {
+      margin-top: 22px;
+    }
+
+    .release-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .release-item {
+      padding: 18px 0;
+      border-top: 1px solid #e9eeeb;
+    }
+
+    .release-item:first-child {
+      padding-top: 4px;
+      border-top: 0;
+    }
+
+    .release-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .release-version {
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .release-date {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .release-item p {
+      margin: 5px 0 0;
+      color: #35414d;
+      font-size: 14px;
+    }
+
     footer {
       margin-top: 24px;
       padding: 22px 10px 4px;
@@ -690,6 +734,47 @@
           </nav>
         </section>
       </div>
+
+      <section class="card section-card release-history" aria-labelledby="release-history-title">
+        <h2 class="section-title" id="release-history-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 3-6.7"/>
+            <path d="M3 4v5h5M12 7v5l3 2"/>
+          </svg>
+          Release history
+        </h2>
+
+        <ol class="release-list">
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.1.0</strong>
+              <time class="release-date" datetime="2026-10-15">October 15, 2026</time>
+            </div>
+            <p>Added support for inequality Number Place puzzles. Scan a photo to see the solution and a step-by-step explanation. Solutions for large, combination, and inequality puzzles are now available by watching a video ad, up to one puzzle per day.</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.2</strong>
+              <time class="release-date" datetime="2026-09-23">September 23, 2026</time>
+            </div>
+            <p>Added full English support and improved digit recognition. We also fixed issues with board layout and session resume, and expanded Google Play availability to seven countries including Japan.</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.1</strong>
+              <time class="release-date" datetime="2026-09-06">September 6, 2026</time>
+            </div>
+            <p>You can now see the techniques and number of moves before solving. One rewarded ad now unlocks 20 moves instead of 10.</p>
+          </li>
+          <li class="release-item">
+            <div class="release-meta">
+              <strong class="release-version">v1.0.0</strong>
+              <time class="release-date" datetime="2026-09-01">September 1, 2026</time>
+            </div>
+            <p>Initial Google Play release, with photo and saved-image recognition, automatic solving, standard and large grids, combination grids, and step-by-step solution review.</p>
+          </li>
+        </ol>
+      </section>
     </main>
 
     <footer>
