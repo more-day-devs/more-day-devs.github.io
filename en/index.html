@@ -210,6 +210,12 @@
       height: 76px;
     }
 
+    /* Google Play のバッジ画像は周囲に余白を含むので、App Store 側は余白を足して高さをそろえる */
+    .store-badge-apple {
+      height: 56px;
+      margin: 10px;
+    }
+
     .phone-wrap {
       align-self: stretch;
       display: flex;
@@ -534,6 +540,11 @@
         height: 66px;
       }
 
+      .store-badge-apple {
+        height: 48px;
+        margin: 9px;
+      }
+
       .phone-wrap {
         grid-column: auto;
         min-height: 270px;
@@ -617,6 +628,16 @@
               class="store-badge"
               src="../assets/google_play_badge_en.png"
               alt="Get it on Google Play">
+          </a>
+          <a
+            class="store-button"
+            href="https://apps.apple.com/us/app/id6817604214"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              class="store-badge store-badge-apple"
+              src="../assets/app_store_badge_en.svg"
+              alt="Download on the App Store">
           </a>
         </div>
 
@@ -750,7 +771,7 @@
               <strong class="release-version">v1.1.0</strong>
               <time class="release-date" datetime="2026-10-15">October 15, 2026</time>
             </div>
-            <p>Added support for inequality Number Place puzzles. Scan a photo to see the solution and a step-by-step explanation. Solutions for large, combination, and inequality puzzles are now available by watching a video ad, up to one puzzle per day.</p>
+            <p>Now available for iOS on the App Store. Added support for inequality Number Place puzzles. Scan a photo to see the solution and a step-by-step explanation. Solutions for large, combination, and inequality puzzles are now available by watching a video ad, up to one puzzle per day.</p>
           </li>
           <li class="release-item">
             <div class="release-meta">
